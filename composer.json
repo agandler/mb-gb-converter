@@ -1,0 +1,19 @@
+{
+    "name": "agandler/mb-gb-converter",
+    "description": "Converts Megabyte in Gigabyte",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Agandler\\MbGbConverter\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Alexander Gandler",
+            "email": "agandler@schueler.hakzell.at"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
