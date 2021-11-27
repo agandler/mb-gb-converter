@@ -2,6 +2,7 @@
 
 It enables you easy calculations and converts Megabyte and Gigabyte in all other Types.
 
+## **Usage**
 ```
 <?php
 //index.php
