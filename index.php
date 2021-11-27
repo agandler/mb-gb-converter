@@ -1,18 +1,17 @@
 <?php
 //index.php
-require './src/tiny-converter.php';
+require './src/dataconverter.php';
+use Agandler\MbGbConverter\DataConverter;
 
-use Agandler\MbGbConverter\TinyConverter;
-use Agandler\Logger\FileLogger;
 
-$calc1 = new TinyConverter();
-$mb=500;
+$calc1 = new DataConverter();
+$mb=50;
 
-$calc2 = new TinyConverter();
-$gb=50;
+$calc2 = new DataConverter();
+$gb=10;
 
-$resmb=$calc1->convertMB($mb);
-echo "GB: $resmb";
-
-$resgb=$calc2->convertGB($gb);
-echo "MB: $resmb";
+$resmb=$calc1->convertMB($mb,"Byte");
+echo 'MB:'.' '. $resmb;
+echo "<br>";
+$resgb=$calc2->convertGB($gb,"Kilobyte");
+echo 'GB:'.' '. $resgb;
