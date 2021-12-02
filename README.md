@@ -1,22 +1,40 @@
-# mb-gb-converter
+# DataConverter
 
-It enables you easy calculations and converts Megabyte and Gigabyte in all other Types.
+It enables you easy calculations and converts between data entities.
+
+## Entities (use the Abbreviation)
+| Abbreviation | Description |
+|:------------:|:-----------:|
+| B            | Byte        |
+| kB           | Kilobyte    |
+| MB           | Megabyte    |
+| GB           | Gigabyte    |
+| TB           | Terabyte    |
+| PB           | Petabyte    |
+| EB           | Exabyte     |
+| ZB           | Zettabyte   |
+| YB           | Yottabyte   |
 
 ## **Usage**
 ```php
-// index.php
-require './src/dataconverter.php';
+/// index.php
+
+require 'vendor/autoload.php';
 use Agandler\MbGbConverter\DataConverter;
 
-$calc1 = new DataConverter();
-$mb=50;
+$result = 0;
 
-$calc2 = new DataConverter();
-$gb=10;
+// Converts 10 Bytes to Megabytes
+$byte = new DataConverter('B', 10);
 
-$resmb=$calc1->convertMB($mb,"Byte");
-echo 'MB:'.' '. $resmb;
+$result = $byte->convertToMegabyte(); 
+echo '10 Bytes:'.' '. $byte->output($result,5,',') . " Megabyte";
+
 echo "<br>";
-$resgb=$calc2->convertGB($gb,"Kilobyte");
-echo 'GB:'.' '. $resgb;
+
+// Converts 1 Terabyte to Gigabytes
+$terabyte = new DataConverter('TB', 1);
+
+$result = $terabyte->convertToGigabyte();
+echo '1 TB:'.' '. $byte->output($result,0) . " GB";
 ```
