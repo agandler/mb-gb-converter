@@ -15,7 +15,7 @@ class DataConverter
         $this->value = $value;
     }
 
-    // Convert Funktionen: Eingabe * 10^(object-type - convert-type)
+    // Convert Funktionen: Eingabe * 10 ^ (object-type - convert-type)
     public function convertToBit()
     {
         return $this->convertToByte()*8;
@@ -58,7 +58,7 @@ class DataConverter
     }
 
 
-    // Findet die Hochzahl für die Berechnung heraus
+    // Findet die Hochzahl für die Berechnung
     private function getTypeValue($type)
     {
         if($type=="B")
