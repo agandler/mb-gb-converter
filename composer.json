@@ -20,5 +20,8 @@
             "url": "github.com:hofdavid/hofmann-david-crypto.git"
         }
     ],
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+    "require": {
+        "hofdavid/crypto-converter": "~v4.0.0"
+    }
 }
