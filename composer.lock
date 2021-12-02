@@ -8,11 +8,11 @@
     "packages": [
         {
             "name": "hofdavid/crypto-converter",
-            "version": "v4.0.1",
+            "version": "v4.0.2",
             "source": {
                 "type": "git",
                 "url": "github.com:hofdavid/hofmann-david-crypto.git",
-                "reference": "9d1be86472389d3e89b51f19f541056aec91527c"
+                "reference": "8ea7c268d045928110d36d771092646eb8f67541"
             },
             "type": "library",
             "autoload": {
@@ -30,7 +30,7 @@
                 }
             ],
             "description": ": Converts the value of fiat currencies to crypto currencies with the latest price",
-            "time": "2021-12-02T18:56:44+00:00"
+            "time": "2021-12-02T19:22:40+00:00"
         }
     ],
     "packages-dev": [],
