@@ -14,6 +14,14 @@
             "email": "agandler@schueler.hakzell.at"
         }
     ],
+    "repositories": [
+        {
+            "type": "git",
+            "url": "github.com:hofdavid/hofmann-david-crypto.git"
+        }
+    ],
     "minimum-stability": "dev",
-    "require": {}
+    "require": {
+        "hofdavid/crypto-converter": "~v4.0.0"
+    }
 }

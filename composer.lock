@@ -1,0 +1,45 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "57793c5be478754ec56e440ebd48266c",
+    "packages": [
+        {
+            "name": "hofdavid/crypto-converter",
+            "version": "v4.0.0",
+            "source": {
+                "type": "git",
+                "url": "github.com:hofdavid/hofmann-david-crypto.git",
+                "reference": "4395f23bf114728d25f2e51807948341b6202c26"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Hofdavid\\CryptoConverter\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "David Hofmann",
+                    "email": "hofdavid@outlook.com"
+                }
+            ],
+            "description": ": Converts the value of fiat currencies to crypto currencies with the latest price",
+            "time": "2021-11-28T02:56:41+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "dev",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.1.0"
+}

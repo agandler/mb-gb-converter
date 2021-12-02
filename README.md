@@ -3,12 +3,10 @@
 It enables you easy calculations and converts Megabyte and Gigabyte in all other Types.
 
 ## **Usage**
-```
-<?php
-//index.php
+```php
+// index.php
 require './src/dataconverter.php';
 use Agandler\MbGbConverter\DataConverter;
-
 
 $calc1 = new DataConverter();
 $mb=50;
