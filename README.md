@@ -3,6 +3,9 @@
 It enables you easy calculations and converts between data entities.
 
 ## Entities (use the Abbreviation)
+
+<div align="center">
+  
 | Abbreviation | Description |
 |:------------:|:-----------:|
 | B            | Byte        |
@@ -14,6 +17,9 @@ It enables you easy calculations and converts between data entities.
 | EB           | Exabyte     |
 | ZB           | Zettabyte   |
 | YB           | Yottabyte   |
+  
+</div>
+
 
 ## **Usage**
 ```php
