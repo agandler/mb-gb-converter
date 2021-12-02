@@ -3,84 +3,107 @@ namespace Agandler\MbGbConverter;
 
 class DataConverter
 {
-    public function convertMB($value, $type)
+    // Einheit
+    private $type = "";
+
+    // Eingabe
+    private $value = 0;
+
+    public function __construct($type, $value)
     {
-        if($type=="Byte")
-        {
-            return $value / 1000000;
-        }
-        elseif ($type="Kilobyte") 
-        {
-            return $value / 1000;
-        }
-        elseif ($type="Megabyte") 
-        {
-            return $value;
-        }
-        elseif ($type="Gigabyte") 
-        {
-            return $value * 1000;
-        }
-        elseif ($type="Terabyte") 
-        {
-            return $value * 1000000;
-        }
-        elseif ($type="Petabyte") 
-        {
-            return $value * 1000000000;
-        }
-        elseif ($type="Exabyte") 
-        {
-            return $value * 1000000000000;
-        }
-        elseif ($type="Zettabyte") 
-        {
-            return $value * 1000000000000000;
-        }
-        elseif ($type="Yottabyte") 
-        {
-            return $value * 1000000000000000000;
-        }
+        $this->type = $type;
+        $this->value = $value;
     }
 
-    public function convertGB($value, $type)
+    // Convert Funktionen: Eingabe * 10^(object-type - convert-type)
+    public function convertToBit()
     {
-        if($type=="Byte")
+        return $this->convertToByte()*8;
+    }
+    public function convertToByte()
+    {
+        return $this->value * pow(10, $this->getTypeValue($this->type) - $this->getTypeValue("B"));
+    }
+    public function convertToKilobyte()
+    {
+        return $this->value * pow(10, $this->getTypeValue($this->type) - $this->getTypeValue("kB"));
+    }
+    public function convertToMegabyte()
+    {
+        return $this->value * pow(10, $this->getTypeValue($this->type) - $this->getTypeValue("MB"));
+    }
+    public function convertToGigabyte()
+    {
+        return $this->value * pow(10, $this->getTypeValue($this->type) - $this->getTypeValue("GB"));
+    }
+    public function convertToTerabyte()
+    {
+        return $this->value * pow(10, $this->getTypeValue($this->type) - $this->getTypeValue("TB"));
+    }
+    public function convertToPetabyte()
+    {
+        return $this->value * pow(10, $this->getTypeValue($this->type) - $this->getTypeValue("PB"));
+    }
+    public function convertToExabyte()
+    {
+        return $this->value * pow(10, $this->getTypeValue($this->type) - $this->getTypeValue("EB"));
+    }
+    public function convertToZettabyte()
+    {
+        return $this->value * pow(10, $this->getTypeValue($this->type) - $this->getTypeValue("ZB"));
+    }
+    public function convertToYottabyte()
+    {
+        return $this->value * pow(10, $this->getTypeValue($this->type) - $this->getTypeValue("YB"));
+    }
+
+
+    // Findet die Hochzahl für die Berechnung heraus
+    private function getTypeValue($type)
+    {
+        if($type=="B")
         {
-            return $value / 1000000000;
+            return 0;
         }
-        elseif ($type="Kilobyte") 
+        elseif ($type=="kB") 
         {
-            return $value / 1000000;
+            return 3;
         }
-        elseif ($type="Megabyte") 
+        elseif ($type=="MB") 
         {
-            return $value / 1000;
+            return 6;
         }
-        elseif ($type="Gigabyte") 
+        elseif ($type=="GB") 
         {
-            return $value;
+            return 9;
         }
-        elseif ($type="Terabyte") 
+        elseif ($type=="TB") 
         {
-            return $value * 1000;
+            return 12;
         }
-        elseif ($type="Petabyte") 
+        elseif ($type=="PB") 
         {
-            return $value * 1000000;
+            return 15;
         }
-        elseif ($type="Exabyte") 
+        elseif ($type=="EB") 
         {
-            return $value * 1000000000;
+            return 18;
         }
-        elseif ($type="Zettabyte") 
+        elseif ($type=="ZB") 
         {
-            return $value * 1000000000000;
+            return 21;
         }
-        elseif ($type="Yottabyte") 
+        elseif ($type=="YB") 
         {
-            return $value * 1000000000000000;
+            return 24;
         }
+
+
+    }
+
+    public function output($value,$decimal,$comma = '.')
+    {
+        return number_format($value,$decimal,$comma," ");
     }
 
 }
